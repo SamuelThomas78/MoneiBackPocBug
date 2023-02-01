@@ -42,7 +42,8 @@ app.get('/create-payment', async (req, res) => {
         },
         callbackUrl: `https://${hostname}`,
         completeUrl: `https://${hostname}`,
-        cancelUrl: `https://${hostname}`
+        cancelUrl: `https://${hostname}`,
+        generatePaymentToken: true
     });
     res.send(payment);
 });
